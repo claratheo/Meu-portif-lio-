@@ -300,6 +300,8 @@ nav a:hover {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    max-width: 1000px;   
+    margin: 0 auto;
 }
 
 /* CARD SERVICOS */
