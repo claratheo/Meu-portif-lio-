@@ -164,13 +164,13 @@ nav a:hover {
 }
 
 /* CARDS */
-.cards {
+/* .cards {
     display: flex;
     gap: 20px;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-}
+} */
 
 .card {
     background-color: white;
