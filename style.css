@@ -168,7 +168,7 @@ nav a:hover {
     display: flex;
     gap: 20px;
     justify-content: center;
-    text-aling: center;
+    text-align: center;
     flex-wrap: wrap;
 }
 
@@ -690,12 +690,12 @@ nav a:hover {
     }
 }
 
-.cards, 
+/* .cards, 
 .depoimento-container,
 .processo-container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
+} */
 
 @media (max-width: 768px) {
     .porque-container {
