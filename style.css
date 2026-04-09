@@ -1,0 +1,728 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.servicos,
+.porque,
+.depoimentos,
+.contato {
+    border-top: 1px solid #ddd;
+    padding-bottom: 100px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* MENU FIXO */
+header {
+   position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #eeeeee;
+    z-index: 1000;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    color: #0a0a0a;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* HERO IMAGEM GRANDE */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url(img/hero-img2.jpeg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeUP 1.2s ease;
+}
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* ANIMÇÃO */
+@keyframes fadeUP {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BOTAO */
+.btn {
+    position: relative;
+    padding: 12px 30px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(252, 249, 249);
+    text-decoration: none;
+    font-weight: bold;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #00bcd4;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: scaleX(1);
+}
+
+.btn:hover {
+    color: rgb(255, 253, 253);
+}
+
+
+/* SEÇÕES */
+.section {
+    padding: 80px 50px;
+
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border:  2px solid black;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}   
+
+.btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* seçao porque */
+#porque {
+    padding: 80px 40px;
+    background-color: #f5f5f5;
+    
+}
+
+/* conteudo em duas colunas */
+#conteudo-porque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.texto, .imagem {
+    flex: 1;
+}
+
+/* lado esquerdo */
+.texto {
+    width: 50%;
+}
+
+.texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* beneficios */
+.beneficios {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.item {
+    flex: 1;
+}
+
+/* cada item */
+.item {
+    max-width: 250px;
+}
+
+.icone {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 0.9rem;
+}
+
+/* lado direito */
+.imagem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* SERVIÇOS */
+
+.serviços {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.servicos h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* FLEXBOX SERVICOS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD SERVICOS */
+.card {
+    width: 300px;
+    text-align: center;   
+}
+
+/* IMAGEM CINZA SERVIcos */
+
+.card .img {
+    width: 100%;
+    height: 180px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* TEXTO SERVICOS */
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+/* PORQUE */
+
+.porque {
+    padding: 80px 50px;
+    background-color: #f5f5f5;
+}
+
+/* FLEX CONTAINER PORQUe */
+
+.porque-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* TEXTO PORQUE */
+
+.porque-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.porque-texto h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.porque-texto p {
+    font-size: 15px;
+    color: #444;
+}
+
+.porque-imagem img {
+    flex: 1;
+    width: 620px;
+    height: 500px;
+    background-color: #ccc;
+    margin-right: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+/* BENEFICIOS PORQUe */
+
+.beneficios {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.item {
+    min-width: 250px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    margin-top: 10px;
+}
+
+/* IMAGEM PORQUE */
+
+.porque-imagem {
+    flex: 1;
+    min-width: 300px;
+   height: 350px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+/* PROCESSO */
+
+.processo {
+    padding: 100px 50px;
+    padding-bottom: 120px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* TITULO PROCESSO */
+
+.processo-titulo h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+/* FLEXBOX PROCESSO */
+
+.processo-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD PROCESSO */
+
+.processo-item {
+    max-width: 320px;
+    text-align: center;
+}
+
+/* IMAGEM PROCEsso */
+/* .processo-img {
+    width: 100%;
+    height: 180px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+} */
+
+/* TEXTO PROCESSO */
+.processo-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.processo-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* LINK */
+.processo-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* HOVER */
+.processo-item a {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.processo-item a:hover {
+    transform: translateX(5px);
+}
+
+/* DEPOIMENTOS */
+.depoimentos {
+    padding: 80px 50px;
+    background-color: #f5f5f5;
+ 
+}
+
+/* TITULO */
+.depoimentos-titulo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.depoimentos-titulo h2 {
+    font-size: 45px;
+    text-align: center;
+}
+
+.depoimentos-titulo p {
+    color: #555;
+    text-align: center;
+}
+
+/* FLEXBOX DEPOIMENTOS */
+.depoimentos-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* CARD DEPOIMENTOS */  
+.depoimento {
+    border: 1px solid #000;
+    padding: 20px;
+    max-width: 320px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* estrelas */
+.stars {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* TEXTO DEPOIMENTO */
+.texto {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* CLIENTE */
+.cliente {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.foto {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.cliente span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+/* CONTATO */
+.contato {
+    padding: 80px 50px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contato-titulo h2 {
+    font-size: 36px;
+}
+
+.contato-titulo p {
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* FLEXBOX CONTATO */
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* CARD CONTATO */
+.contato-item {
+    max-width: 250px;
+}
+
+.icon i {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.contato-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contato-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contato-item a {
+    text-decoration: underline;
+    color: black;
+}
+
+/* HOVER */
+.contato-item:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #0d0d0d; 
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #bbb;
+    letter-spacing: 0.5px;
+}
+
+.bnt {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.bnt:hover {
+    background-color: #0056b3;
+}
+
+.card, .projeto, .depoimento {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #eeeeee;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+}
+
+.cards, 
+.depoimento-container,
+.processo-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media (max-width: 768px) {
+    .porque-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .porque-imagem img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}

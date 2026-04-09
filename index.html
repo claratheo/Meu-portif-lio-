@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('nav ul');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+</script>
+
+<body>
+  
+        <header>
+        <nav>
+            <div class="menu-toggle">☰</div>
+            <div class="logo">Logo </div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <section class="hero" id="hero">
+            <div class="hero-content">
+            <h1>Desenvolvimento de Software</h1>
+            <p>Transformando ideias em soluções digitais inovadoras.</p>
+            <a href="#servicos" class="btn">Saiba Mais</a>
+            </div>
+        </section> 
+
+        <section class="servicos hidden" id="servicos">
+            <h2>Descubra os principais serviços que ofereço como desenvolvedora de software.
+            </h2>
+
+            <div class="cards">
+
+                <div class="card hidden">
+                    <div class="img"><img src="img/servicos1.2.jpeg"></div>
+                    <h3>Desenvoçvimento de aplicativos Moveis para android e ios.</h3>
+                    <p></p>
+                </div>
+
+                <div class="card hidden">
+                    <div class="img"><img src="img/servicos2.jpeg"></div>
+                    <h3>Consultoria em tecnologia da informação para otimização de processos.</h3>  
+                    <p>Ajudo sua empresa a adotar as melhores práticas tecnológicas.</p>
+            </div>
+
+                <div class="card hidden">
+                    <div class="img"><img src="img/servicos3.jpeg"></div>
+                    <h3>Criação de sites responsivos com design moderno e atraente.</h3>
+                    <p>Desenvolvo sites que se adaptam a qualquer dispositivo, melhorando a experiência do usuário.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="porque" id="sobre">
+
+            <div class="porque-container">
+                <!-- LADO ESQUERDO -->
+                 <div class="porque-texto">
+                    <h2>Por que escolher uma profissional de programação?</h2>
+
+                    <p>
+                        Contratar uma profissional de programação traz benefícios significativos para o seu negócio, como otimização de processos, aumento da produtividade e desenvolvimento de soluções tecnológicas sob medida.
+                    </p>
+
+                    <div class="beneficios">
+
+                        <div class="item">
+                            <div class="icon"></div>
+                            <h3>Experiência Comprovada</h3>
+                            <p>Resultados de alta qualidade e eficiência em projetos complexos.</p>
+                        </div>
+
+                        <div class="item">
+                            <div class="icon"></div>
+                            <h3>Abordagem Personalizada</h3>
+                            <p>Entrego soluções sob medida, alinhadas às suas necessidades específicas.</p>
+                        </div>
+                         <a href="#sobre" class="btn">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <!-- LADO DIREITO -->
+                     <div class="porque-imagem">
+                        <img src="img/download(3).jpeg">
+                     </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section class="processo">
+            <div class="processo-titulo">
+                <h2>Entenda como transformo suas ideias em projetos de sucesso.</h2>
+            </div>
+
+            <div class="processo-container">
+
+                <!-- ITEM 1 -->
+                 <div class="processo-item">
+                    <div class="processo-img"></div>
+                    <h3>Meu processo é simples e eficaz do início ao fim.</h3>
+                    <p>Começamos com uma conversa para entender suas necessidades e obejtivos.</p>
+                    <a href="">Saiba Mais ></a>
+                 </div>
+
+                 <!-- ITEM 2  -->
+                  <div class="processo-item">
+                    <div class="processo-img"></div>
+                    <h3>Acompanho cada etapa para garantir a sua sastifação total.</h3>
+                    <p>Após a definição do projeto, inicio o desenvolvimento com total transparencia.</p>
+                    <a href="">Saiba Mais > </a>
+                  </div>
+
+                    <!-- ITEM 3 -->
+                     <div class="processo-item">
+                        <div class="processo-img"></div>
+                        <h3>Entrego o projeto final com suporte e acompanhamento contínuo.</h3>
+                        <p>Estou sempre disponível para ajustes e feedbacks após a entrega do projeto final.</p>
+                        <a href="">Saiba Mais > </a>
+                     </div> 
+
+            </div>
+
+        </section>
+
+        <section class="depoimentos">
+
+            <div class="depoimentos-titulo">
+                <h2>Depoimentos de clientes</h2>
+                <p>Veja o que nossos clientes tem a dizer!</p>
+            </div>
+
+            <div class="depoimentos-container">
+
+                <!-- CARD 1 -->
+                <div class="depoimento">
+                    <div class="stars">★★★★★</div>
+                    <p class="texto">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum doloremque corrupti odio. Alias impedit rem voluptatem? Ducimus dolores ipsam alias, saepe cupiditate reiciendis asperiores, similique vero illo voluptatibus deleniti possimus.</p>
+
+                    <div class="cliente">
+                        <div class="foto"></div>
+                            <div>
+                                <strong>Maria Silva</strong>
+                                <span>CEO da Tech Solutions</span>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="depoimento">
+                        <div class="stars">★★★★★</div>
+                        <p class="texto">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum doloremque corrupti odio. Alias impedit rem voluptatem? Ducimus dolores ipsam alias, saepe cupiditate reiciendis asperiores, similique vero illo voluptatibus deleniti possimus.</p>
+
+                        <div class="cliente">
+                            <div class="foto"></div>
+                                <div>
+                                    <strong>João Pereira</strong>
+                                    <span>Fundador da InovaTech</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="depoimento">
+                            <div class="stars">★★★★★</div>
+                            <p class="texto">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum doloremque corrupti odio. Alias impedit rem voluptatem? Ducimus dolores ipsam alias, saepe cupiditate reiciendis asperiores, similique vero illo voluptatibus deleniti possimus.</p>
+
+                            <div class="cliente">
+                                <div class="foto"></div>
+                                    <div>
+                                        <strong>Ana Costa</strong>
+                                        <span>Gerente de Projetos da SoftTech</span>
+                                    </div>
+                                </div>    
+                            </div>
+            </div>
+            </section>
+        </section>
+
+        <!-- CONTATO -->
+         <section class="contato" id="contato">
+
+            <div class="contato-titulo">
+                <h2>Entre em contato</h2>
+                <p>Estou pronta para transformar suas ideias em realidade. Entre em contato comigo hoje mesmo!</p>
+            </div>
+
+            <div class="contato-container">
+
+                <!-- EMAIL -->
+                <div class="contato-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="mailto:hello@relume.io">hello@relume.io</a>
+            </div>
+
+                <!-- TELEFONE -->
+                <div class="contato-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3>Telefone</h3>
+                    <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="tel:+5511999999999">+55 (11) 99999-9999</a>
+                </div>
+
+                <!-- ENDEREÇO -->
+                <div class="contato-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Endereço</h3>
+                    <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="https://goo.gl/maps/xyz" target="_blank">Rua Exemplo, 123 - São Paulo, SP</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; @2026 Ana Clara Theophilo. Todos os direitos reservados.</p>
+        </footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+
+<script>
+const elements = document.querySelectorAll(".hidden");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+elements.forEach((el) => observer.observe(el));
+</script>
+
+</body> 
+</html>
